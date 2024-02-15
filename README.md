@@ -5,7 +5,7 @@ Service is responsible for keeping track of different books and their respective
 
 ## Running the Application
 
-Images for the service can be created and run with `docker compose up --build` command.<br>
+Images for the service can be created and run with `docker compose --profile dev up --build` command.<br>
 Compose file will create two API images for development and test environments.
 <br>
 These containers share the same MongoDb instance and only one of them should be running in a moment to function properly. Application uses `5000` as the default port for dev and prod, `3000` for test.

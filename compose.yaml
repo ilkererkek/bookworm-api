@@ -9,16 +9,18 @@ services:
       - 5000:5000
     depends_on:
       - bookwormdb
+    profiles:
+      - dev
   test:
     build:
       context: .
       target: test
     environment:
-      MONGO_URI: mongodb://bookwormdb:27017
+      MONGO_URI: mongodb://bookwormdb-test:27017
     ports:
       - 3000:3000
     depends_on:
-      - bookwormdb
+      - bookwormdb-test
     profiles:
       - test
   bookwormdb:
@@ -27,3 +29,11 @@ services:
       - "27017:27017"
     volumes:
       - ./data:/data/db
+    profiles:
+      - dev
+  bookwormdb-test:
+    image: mongo
+    ports:
+      - "27017:27017"
+    profiles:
+      - test
