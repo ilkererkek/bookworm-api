@@ -1,0 +1,17 @@
+services:
+  bookwormapi:
+    build:
+      context: .
+      target: prod
+    environment:
+      MONGO_URI: mongodb://bookwormdb:27017
+    ports:
+      - 5000:5000
+    depends_on:
+      - bookwormdb
+  bookwormdb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db

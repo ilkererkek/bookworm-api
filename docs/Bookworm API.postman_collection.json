@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "9e69655b-7611-4372-b4f1-d85d3096c077",
+		"name": "Bookworm API",
+		"description": "A Rest API with mongoose and MongoDB for the bookworm website.\n\nAll of the list responses in the API support pagination and sorting by query parameters.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27395907"
+	},
+	"item": [
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "Get Authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/authors?page=1&limit=1&sort=-name",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authors"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "-name"
+								}
+							]
+						},
+						"description": "It returns all of the authors with pagination."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Author",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"İlker Erkek\",\r\n    \"country\": \"Turkey\",\r\n    \"birthDate\": \"2001-08-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/authors/{{{{AUTHOR_ID}}}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"{{{{AUTHOR_ID}}}}"
+							]
+						},
+						"description": "It returns the specific autor with the given id in the url parameter."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Bookworm Writer\",\r\n    \"country\": \"Turkey\",\r\n    \"birthDate\": \"2001-08-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/authors",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authors"
+							]
+						},
+						"description": "Creates a new Author and returns the created Author."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Bookworm Writer\",\r\n    \"country\": \"Turkey\",\r\n    \"birthDate\": \"2001-08-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/authors/{{{{AUTHOR_ID}}}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"{{{{AUTHOR_ID}}}}"
+							]
+						},
+						"description": "Updates the Author that has the given id and returns the updated Author."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/authors/{{{{AUTHOR_ID}}}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"{{{{AUTHOR_ID}}}}"
+							]
+						},
+						"description": "Deletes the Author that has the given id and cascade deletes all of the books owned by the author."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Books of an Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/authors/{{{{AUTHOR_ID}}}}/books?page=1&limit=1&sort=-title",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"{{{{AUTHOR_ID}}}}",
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "-title"
+								}
+							]
+						},
+						"description": "Returns all of the books of Author with the givenId in the url parameter with pagination and sorting available in query."
+					},
+					"response": []
+				},
+				{
+					"name": "Add a book for the Author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Deneme\",\r\n    \"price\": 20,\r\n    \"isbn\": \"DENEME\",\r\n    \"language\": \"English\",\r\n    \"numberOfPages\": 20,\r\n    \"publisher\": \"Bookworm Books\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/authors/{{{{AUTHOR_ID}}}}/books",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"{{{{AUTHOR_ID}}}}",
+								"books"
+							]
+						},
+						"description": "Adds the book to the Author with the given id in the url parameter."
+					},
+					"response": []
+				}
+			],
+			"description": "It defines all of the operations on the Authors Resource."
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Get Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/books?page=1&limit=1&sort=-title",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "-title"
+								}
+							]
+						},
+						"description": "It returns all of the books with pagination and sorting available in query."
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/books/65cd1f0ebf80fd2a2c4490f0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"65cd1f0ebf80fd2a2c4490f0"
+							]
+						},
+						"description": "It returns the specific book with the given id in the url parameter."
+					},
+					"response": []
+				},
+				{
+					"name": "Create a book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Bookworm\",\r\n    \"price\": 20,\r\n    \"isbn\": \"ISBN\",\r\n    \"language\": \"English\",\r\n    \"numberOfPages\": 20,\r\n    \"publisher\": \"Bookworm Books\",\r\n    \"author\": \"{{{{AUTHOR_ID}}}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/books",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						},
+						"description": "Creates a new Book and returns the created Book."
+					},
+					"response": []
+				},
+				{
+					"name": "Update a book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Deneme\",\r\n    \"price\": 100,\r\n    \"isbn\": \"ISBN\",\r\n    \"language\": \"English\",\r\n    \"numberOfPages\": 20,\r\n    \"publisher\": \"Bookworm Books\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/books/{{BOOK_ID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"{{BOOK_ID}}"
+							]
+						},
+						"description": "Updates the Book that has the given id and returns the updated Book."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/books/{{BOOK_ID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"{{BOOK_ID}}"
+							]
+						},
+						"description": "Deletes the Book that has the given id."
+					},
+					"response": []
+				}
+			],
+			"description": "It defines all of the operations on the Books Resource."
+		}
+	],
+	"variable": [
+		{
+			"key": "{{AUTHOR_ID}}",
+			"value": "65cd1cfb9dcfb5359fb5c7ed"
+		},
+		{
+			"key": "BOOK_ID",
+			"value": "65cd1f0ebf80fd2a2c4490f0"
+		}
+	]
+}

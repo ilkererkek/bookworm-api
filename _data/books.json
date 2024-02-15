@@ -1,0 +1,102 @@
+[
+    {
+        "_id" : "65cd3dec2a8d940a99d61e2d",
+        "title" : "Harry Potter and the Philosopher's Stone",
+        "price": 100,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 250,
+        "publisher": "Bookworm Press",
+        "author": "65cd1ce53b793fe0bedabd41"
+    },
+    {
+        "_id" : "65cd3df281d66779c6382d5e",
+        "title" : "Harry Potter and the Chamber of Secrets",
+        "price": 100,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 280,
+        "publisher": "Bookworm Press",
+        "author": "65cd1ce53b793fe0bedabd41"
+    },
+    {
+        "_id" : "65cd3df8c5dcab435ffbc4c8",
+        "title" : "Harry Potter and the Prisoner of Azkaban",
+        "price": 100,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 240,
+        "publisher": "Bookworm Press",
+        "author": "65cd1ce53b793fe0bedabd41"
+    },
+    {
+        "_id" : "65cd3dfe260a3df433acfb1d",
+        "title" : "Crime and Punishment",
+        "price": 250,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 500,
+        "publisher": "Bookworm Press",
+        "author": "65cd1ceb4fa74dd06be70d07"
+    },
+    {
+        "_id" : "65cd3e0293f9aa3d3db547eb",
+        "title" : "Yeraltından Notlar ",
+        "price": 200,
+        "isbn": "978-3-16-148410-0",
+        "language": "Turkish",
+        "numberOfPages": 500,
+        "publisher": "Bookworm Press",
+        "author": "65cd1ceb4fa74dd06be70d07"
+    },
+    {
+        "_id" : "65cd3e0574b4a5a31b7bdc94",
+        "title" : "War and Peace",
+        "price": 200,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 750,
+        "publisher": "Bookworm Press",
+        "author": "65cd1cf15639c2436b9b46c7"
+    },
+    {
+        "_id" : "65cd3e0af864431cee6edeae",
+        "title" : "The Fellowship of the Ring",
+        "price": 200,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 1000,
+        "publisher": "Bookworm Press",
+        "author": "65cd1cf5ab2cbccd3545bc40"
+    },
+    {
+        "_id" : "65cd3e128ae0f8752870ff7f",
+        "title" : "The Two Towers",
+        "price": 200,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 1000,
+        "publisher": "Bookworm Press",
+        "author": "65cd1cf5ab2cbccd3545bc40"
+    },
+    {
+        "_id" : "65cd3e19eba41b2e0b6b1c77",
+        "title" : "The Return of the King",
+        "price": 200,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 1000,
+        "publisher": "Bookworm Press",
+        "author": "65cd1cf5ab2cbccd3545bc40"
+    },
+    {
+        "_id" : "65cd3e1e7f08722202be2836",
+        "title" : "The Shining",
+        "price": 200,
+        "isbn": "978-3-16-148410-0",
+        "language": "English",
+        "numberOfPages": 1000,
+        "publisher": "Bookworm Press",
+        "author": "65cd1cfb9dcfb5359fb5c7ed"
+    }
+]

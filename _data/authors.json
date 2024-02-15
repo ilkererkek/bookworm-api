@@ -1,0 +1,32 @@
+[
+    {
+        "_id":"65cd1ce53b793fe0bedabd41",
+        "name":"J. K. Rowling",
+        "country": "England",
+        "birthDate": "1965-07-31"
+    },
+    {
+        "_id":"65cd1ceb4fa74dd06be70d07",
+        "name":"Fyodor Dostoevsky",
+        "country": "Russia",
+        "birthDate": "1821-11-11"
+    },
+    {
+        "_id":"65cd1cf15639c2436b9b46c7",
+        "name":"Leo Tolstoy",
+        "country": "Russia",
+        "birthDate": "1828-09-09"
+    },
+    {
+        "_id":"65cd1cf5ab2cbccd3545bc40",
+        "name":"J. R. R. Tolkien",
+        "country": "South Africa",
+        "birthDate": "1973-01-03"
+    },
+    {
+        "_id":"65cd1cfb9dcfb5359fb5c7ed",
+        "name":"Stephen King",
+        "country": "United States of America",
+        "birthDate": "1947-09-21"
+    }
+]
